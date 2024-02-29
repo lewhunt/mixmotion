@@ -1,0 +1,68 @@
+body {
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+body,
+.mixmotion-player {
+  background: black;
+  :focus {
+    outline: 0;
+    outline-color: transparent;
+    outline-style: none;
+  }
+}
+
+.mixmotion-player {
+  height: 100vh;
+  position: relative;
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .mixcloud-widget {
+    top: unset;
+    bottom: 0;
+    z-index: 2;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    &.show {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  &__spinner {
+    fill: white;
+    margin: auto;
+    bottom: 6%;
+    right: 0;
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
+
+    > .path {
+      transform-origin: center;
+      animation: spin 0.75s infinite linear;
+    }
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

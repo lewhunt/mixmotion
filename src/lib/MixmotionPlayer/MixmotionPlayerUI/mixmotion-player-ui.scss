@@ -1,0 +1,570 @@
+@import "../vars.scss";
+
+:root {
+  --app-height: 100vh;
+  --app-width: 100vw;
+}
+
+.mixmotion-player-ui {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  box-sizing: border-box;
+  padding: vw($padding-tb) vw($padding-lr);
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.4s 1s;
+
+  @media screen and (min-width: $large-screen-size) {
+    padding: vw(50px) vw($padding-lr) vw(60px);
+  }
+
+  * {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
+  }
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+  &__cover {
+    transition: opacity 0.3s;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.7) 85%,
+      rgba(0, 0, 0, 0.9) 100%
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    &.hide {
+      opacity: 0;
+    }
+  }
+
+  &.collapsed-mode {
+    .mixmotion-player-ui__image,
+    .metadata,
+    .progress-bar {
+      transition: opacity 0.2s, transform 0.4s;
+      opacity: 0 !important;
+      transform: translateY(50%);
+      pointer-events: none;
+    }
+    .metadata {
+      transform: translateY(100%);
+    }
+    .mixmotion-player-ui__cover {
+      opacity: 1;
+    }
+    .mixmotion-player-ui__content {
+      transform: translateY(20%);
+      @media screen and (max-width: $small-screen-size) {
+        transform: translateY(18%);
+      }
+    }
+    .buttons {
+      opacity: 1;
+    }
+  }
+
+  &.inactive-mode {
+    cursor: none;
+    .buttons,
+    .progress-bar,
+    .mixmotion-player-ui__image,
+    .mixmotion-player-ui__cover,
+    .metadata--count {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .mixmotion-player-ui__content,
+    .mixmotion-player-ui__image {
+      transform: translateY(75%);
+      text-align: left;
+      @media screen and (min-width: $small-screen-size) {
+        transform: translateY(70%);
+        .metadata--title {
+          opacity: 0.9;
+          transform: scale(0.8) translateY(30%);
+        }
+        .metadata--subTitle {
+          transform: scale(0.9);
+          opacity: 0.9;
+          .focused:before {
+            border-color: transparent;
+          }
+        }
+      }
+      .custom-link {
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: #00000088 1px 0 6px;
+        background-color: transparent;
+      }
+      &.fade-out {
+        .metadata--title,
+        .metadata--subTitle {
+          animation: fadeOutAnim 1s forwards 4s;
+        }
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    margin: 0 auto vw(24px);
+    height: 40%;
+    border: 1px solid rgba(200, 200, 200, 0.5);
+    transition: transform 0.3s;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    @media (orientation: portrait) {
+      height: 35%;
+      margin: 0 auto 8%;
+    }
+    @media screen and (max-width: $small-screen-size) and (orientation: portrait) {
+      height: 30%;
+    }
+    @media screen and (max-height: 650px) and (orientation: landscape) {
+      display: none;
+    }
+    @media screen and (min-width: $large-screen-size) {
+      height: 45%;
+    }
+  }
+
+  &__content {
+    transition: all 0.3s;
+    z-index: 1;
+
+    &.hide {
+      opacity: 0;
+    }
+  }
+
+  .metadata-wrapper {
+    width: 95%;
+    text-align: center;
+    padding: vw(4px) 0;
+    margin: 0 auto;
+    transition: transform 0.3s, opacity 0.3s;
+    animation: fadeInAnim ease-in-out 0.3s forwards;
+  }
+
+  .metadata {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: rgb(250, 250, 250);
+    padding: 6px vw($padding-lr) 0;
+    text-decoration: none;
+    transition: transform 0.3s, opacity 0.3s;
+    text-shadow: #00000088 1px 0 8px;
+
+    &--title {
+      font-size: 34px;
+      padding-bottom: vw(12px);
+      font-weight: 600;
+      overflow: hidden;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    &--count {
+      font-size: 16px;
+      margin: vw(16px) auto 0;
+      pointer-events: none;
+      user-select: none;
+      color: rgba(250, 250, 250, 0.7);
+      width: 50%;
+      overflow: hidden;
+      span {
+        text-transform: capitalize;
+      }
+    }
+
+    @media screen and (min-width: $large-screen-size) {
+      .metadata {
+        padding: vw(8px) vw($padding-lr);
+      }
+      &--title {
+        font-size: vw(46px);
+      }
+      &--count {
+        font-size: vw(20px);
+      }
+    }
+
+    @media screen and (max-width: $medium-screen-size) {
+      &--title {
+        font-size: 26px;
+      }
+      &--count {
+        margin: vw(16px) auto;
+        width: 70%;
+      }
+    }
+
+    @media screen and (max-width: $small-screen-size) {
+      &--title {
+        font-size: 22px;
+        padding: 0;
+      }
+      &--subTitle * {
+        font-size: 16px;
+        overflow: hidden;
+      }
+      &--subTitle,
+      &--count {
+        margin: 0 auto;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .buttons {
+    padding: vw($padding-tb) vw($padding-lr);
+    height: vw($buttons-height);
+    min-height: $buttons-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5vw;
+    transition: all 0.3s;
+    border-top: 0.5px solid rgba(255, 255, 255, 0);
+    pointer-events: none;
+
+    .buttons__left-right {
+      width: 100%;
+    }
+
+    &__left-right,
+    &__center,
+    &__left,
+    &__right {
+      display: flex;
+      gap: 3vw;
+    }
+
+    &__left {
+      margin-right: auto;
+    }
+
+    &__center {
+      position: absolute;
+    }
+
+    &__right {
+      margin-left: auto;
+    }
+
+    @media screen and (max-width: $medium-screen-size) {
+      &__left-right,
+      &__left,
+      &__right {
+        gap: 2vw;
+      }
+    }
+
+    @media screen and (max-width: $small-screen-size) and (orientation: portrait) {
+      margin-top: 16px;
+      height: calc(2.2 * $buttons-height);
+      align-items: unset;
+      &__left-right {
+        width: unset !important;
+        margin-top: 80px;
+        padding: 0 8px;
+        border-radius: 30px;
+        height: 52px;
+        background-color: rgba(200, 200, 200, 0.15);
+        > * {
+          gap: 1vw;
+        }
+      }
+    }
+
+    button {
+      position: relative;
+      pointer-events: auto;
+      box-sizing: border-box;
+      border-radius: 50%;
+      border: vw(2px) solid transparent;
+      background-color: transparent;
+      color: white;
+      width: vw($buttons-height);
+      height: vw($buttons-height);
+      min-width: calc($buttons-height * 0.9);
+      min-height: calc($buttons-height * 0.9);
+      cursor: pointer;
+      transition: all 0.3s;
+      outline: none;
+
+      &.large {
+        transform: scale(1.3);
+        small {
+          transform: translateY(45px) scale(0.8);
+          @media screen and (min-width: $large-screen-size) {
+            transform: translateY(200%) scale(0.8);
+          }
+        }
+      }
+
+      small {
+        position: absolute;
+        transform: translateY(50px);
+        left: -100%;
+        width: 300%;
+        opacity: 0;
+        transition: all 0.3s;
+        font-size: vw(24px);
+        pointer-events: none;
+        user-select: none;
+
+        @media screen and (max-width: $medium-screen-size) {
+          display: none;
+        }
+        @media screen and (min-width: $large-screen-size) {
+          transform: translateY(vw(65px));
+        }
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        pointer-events: none;
+      }
+
+      &.focused {
+        border-color: rgb(250, 250, 250);
+        outline: none;
+
+        small {
+          opacity: 1;
+        }
+      }
+
+      @media screen and (max-width: $medium-screen-size) {
+        border: vw(3px) solid transparent;
+      }
+
+      @media screen and (max-width: $small-screen-size) and (orientation: portrait) {
+        &.focused:not(.large) {
+          border: transparent !important;
+        }
+        &.large {
+          border: 1px solid rgb(250, 250, 250) !important;
+        }
+        &[focus-key="mixcloud"] {
+          display: none;
+        }
+      }
+
+      &.selected-dot {
+        position: relative;
+        &::before {
+          content: ".";
+          position: absolute;
+          bottom: -4px;
+          left: 38%;
+          font-size: 40px;
+        }
+      }
+
+      &.selected-fill {
+        background-color: rgb(50, 50, 50);
+      }
+
+      svg {
+        font-size: vw(26px);
+        @media screen and (max-width: $medium-screen-size) {
+          font-size: 16px !important;
+          &.fa-github,
+          &.fa-mixcloud {
+            font-size: 22px !important;
+          }
+        }
+
+        &.fa-play {
+          padding-left: 3px;
+          @media screen and (max-width: $small-screen-size) {
+            padding-left: 2px;
+          }
+        }
+
+        &.fa-backward {
+          margin-left: -3px;
+        }
+
+        &.fa-forward {
+          margin-left: 3px;
+        }
+
+        &.fa-volume-xmark {
+          margin-left: -2px;
+        }
+
+        &.fa-github {
+          font-size: vw(36px);
+          animation: shake 9s infinite; /* Adjust duration as needed */
+        }
+        &.fa-mixcloud {
+          font-size: vw(32px);
+          @media screen and (max-width: $small-screen-size) {
+            font-size: 26px !important;
+          }
+        }
+      }
+    }
+  }
+
+  .progress-bar-wrapper {
+    min-height: $buttons-height;
+  }
+}
+
+.custom-link {
+  text-decoration: none;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: normal;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: #0000005c 1px 0 2px;
+  background-color: transparent;
+  padding: 2px 10px;
+  display: inline-block;
+  border-radius: 18px;
+  border: 2px solid transparent;
+  outline: 1px solid transparent;
+  transition: all 0.3s;
+  position: relative;
+  user-select: none;
+  pointer-events: initial;
+  z-index: 2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 2px solid transparent;
+    border-radius: vw(60px);
+    transition: all 0.3s;
+    @media screen and (max-width: $small-screen-size) {
+      border-radius: 100px;
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &.custom-link--unfocused-border::before {
+    border-color: rgba(240, 240, 240, 0.2);
+    @media screen and (max-width: $large-screen-size) {
+      right: -14px;
+      left: -14px;
+    }
+  }
+
+  &:not(.custom-link--unfilled).match {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+    text-shadow: none;
+  }
+  &.focused::before {
+    border-color: rgba(240, 240, 240, 0.9);
+    @media (hover: none), screen and (max-width: $small-screen-size) {
+      border-color: transparent;
+    }
+  }
+
+  @media screen and (max-width: $small-screen-size) {
+    font-size: 14px;
+    input {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: $large-screen-size) {
+    font-size: vw(20px);
+    border-radius: vw(20px);
+    padding: vw(4px) vw(12px);
+    &::before {
+      border: vw(2px) solid transparent;
+      top: vw(-12px);
+      right: vw(-14px);
+      bottom: vw(-12px);
+      left: vw(-14px);
+    }
+  }
+}
+
+@keyframes fadeInAnim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOutAnim {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes shake {
+  6% {
+    transform: rotate(0deg) scale(1);
+  }
+  10% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  12% {
+    transform: rotate(-10deg) scale(1);
+  }
+  13% {
+    transform: rotate(10deg);
+  }
+  14% {
+    transform: rotate(-10deg);
+  }
+  15% {
+    transform: rotate(10deg);
+  }
+  16% {
+    transform: rotate(-10deg);
+  }
+  17% {
+    transform: rotate(10deg);
+  }
+  18% {
+    transform: rotate(-10deg);
+  }
+  19% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(-10deg);
+  }
+  22% {
+    transform: rotate(0deg);
+  }
+}

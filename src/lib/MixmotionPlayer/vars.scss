@@ -1,0 +1,32 @@
+@function vw($px-vw, $base-vw: 1920px) {
+  @return calc(($px-vw * 100vw) / $base-vw);
+}
+
+$buttons-height: 60px;
+$padding-tb: 40px;
+$padding-lr: 50px;
+$large-screen-size: 1600px;
+$medium-screen-size: 1200px;
+$small-screen-size: 600px;
+
+@keyframes fadeSlideInAnim {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeSlideOutAnim {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-70px);
+  }
+}

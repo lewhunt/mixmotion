@@ -1,0 +1,111 @@
+:root {
+  --app-height: 100vh;
+  --app-width: 100vw;
+}
+
+.dynamic-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  * {
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
+    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translate3d(0, 0, 0);
+    transform: translateZ(0);
+  }
+
+  &__canvas,
+  &__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__video {
+    opacity: 0;
+    transition: opacity;
+    &.visible {
+      opacity: 1;
+      transition: opacity 1.5s 0.5s;
+    }
+    &:not(.visible) {
+      opacity: 0;
+      transition-duration: 0.4s;
+      transition-delay: 0s;
+    }
+  }
+
+  &__cover-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    transform: translate3d(0, 0, 0);
+    transition: opacity 0s ease-in-out 0s;
+    animation: slideAnimDown 50s infinite alternate ease-in-out 1s;
+
+    &.enable {
+      mix-blend-mode: overlay;
+      opacity: 0.1;
+      transition-duration: 0.3s;
+
+      &.with-video {
+        z-index: -1;
+        opacity: 0.2;
+        transition-duration: 0.3s;
+      }
+
+      &.with-video-visible {
+        z-index: -1;
+        opacity: 0.3;
+        transition-duration: 1s;
+      }
+    }
+
+    @mixin staticBackground() {
+      object-fit: cover;
+      animation: none !important;
+    }
+
+    &.static {
+      @include staticBackground;
+      @media (orientation: landscape) {
+        width: 100%;
+        height: auto;
+        top: 50%;
+        transform: translateY(-50%) !important;
+      }
+    }
+
+    @media (orientation: portrait) {
+      @include staticBackground;
+      width: auto;
+      height: 100%;
+      left: 50%;
+      transform: translateX(-50%) !important;
+    }
+  }
+}
+
+@keyframes slideAnimDown {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, calc(var(--app-height) - 100%), 0);
+  }
+}

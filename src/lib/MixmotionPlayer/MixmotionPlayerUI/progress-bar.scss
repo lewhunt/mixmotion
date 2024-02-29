@@ -1,0 +1,130 @@
+@import "../vars.scss";
+
+.progress-bar {
+  padding: vw($padding-tb) calc(vw($padding-lr) - 4px) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: $buttons-height;
+  gap: vw(22px);
+  transition: opacity 0.3s, transform 0.3s;
+  position: relative;
+
+  @media screen and (max-width: $medium-screen-size) {
+    height: calc($buttons-height - 22px);
+  }
+
+  .time {
+    color: rgba(250, 250, 250);
+    font-size: vw(24px);
+    font-weight: 600;
+    min-height: 24px;
+    min-width: 70px;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s;
+    user-select: none;
+    pointer-events: none;
+
+    &--duration {
+      text-align: right;
+    }
+
+    @media screen and (max-width: $medium-screen-size) {
+      font-size: 18px;
+    }
+
+    @media screen and (max-width: $small-screen-size) {
+      font-size: 14px;
+    }
+  }
+
+  .bar-wrapper {
+    flex: 1;
+    cursor: pointer;
+    .bar {
+      position: relative;
+      height: vw(6px);
+      border-radius: vw(4px);
+      background-color: rgba(250, 250, 250, 0.2);
+      margin: vw(12px) 0;
+
+      @media screen and (max-width: $medium-screen-size) {
+        height: vw(12px);
+        margin: vw(40px) 0;
+      }
+      @media screen and (max-width: $small-screen-size) {
+        height: vw(16px);
+        margin: vw(80px) 0;
+      }
+
+      .fill {
+        background-color: rgb(250, 250, 250);
+        position: absolute;
+        left: 0;
+        height: 100%;
+        border-radius: vw(4px);
+        opacity: 0.8;
+        transition: all 0.3s;
+      }
+
+      .progress-bar-button {
+        position: absolute;
+        background-color: rgb(250, 250, 250);
+        position: absolute;
+        border-radius: 50%;
+        width: vw(18px);
+        height: vw(18px);
+        padding: vw(4px);
+        margin: vw(4px);
+        top: vw(-10px);
+        margin-left: vw(-4px);
+        border: vw(4px) solid transparent;
+        transition: all 0.3s;
+        transform: scale(1.2);
+        cursor: pointer;
+        pointer-events: none;
+
+        @media screen and (max-width: $medium-screen-size) {
+          width: vw(24px);
+          height: vw(24px);
+        }
+        @media screen and (max-width: $small-screen-size) {
+          width: vw(50px);
+          height: vw(50px);
+          top: vw(-22px);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: vw(-10px);
+          right: vw(-10px);
+          bottom: vw(-10px);
+          left: vw(-10px);
+          border: vw(2px) solid transparent;
+          border-radius: 50%;
+          transition: all 0.3s;
+        }
+
+        &.focused,
+        &:hover {
+          transform: scale(1.6);
+        }
+
+        &.focused::before {
+          border-color: rgb(250, 250, 250);
+        }
+      }
+    }
+    &.focused,
+    &:hover {
+      .progress-bar-button {
+        transform: scale(1.6);
+        opacity: 1;
+      }
+    }
+  }
+}
