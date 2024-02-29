@@ -13,6 +13,6 @@ export default defineConfig({
     setupFiles: "./tests/setup.js",
   },
   build: {
-    outDir: "./app",
+    outDir: "./demo",
   },
 });
