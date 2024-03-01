@@ -60,6 +60,7 @@ export type MixmotionPlayerProps = {
   children?: React.ReactNode;
   customButtons?: ButtonProps[];
   enableBackdropVideo?: boolean;
+  enableUserLink?: boolean;
   height?: string;
   listIndex?: number;
   showWidget?: boolean;

@@ -46,7 +46,7 @@ const DynamicBackdrop: React.FC<DynamicBackdropProps> = ({
   imageSrc,
   enableVideo = false,
   enableCoverImage = false,
-  enableCrossOriginVideo = false,
+  enableCrossOriginVideo = true,
   disableBlurAnimation = false,
   disablePulseAnimation = false,
   disableSlideAnimation = false,

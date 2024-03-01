@@ -35,9 +35,18 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
   ...props
 }) => {
   try {
-    useLocation?.();
+    useNavigate();
   } catch (e) {
-    return <div className="custom-link no-routes-fallback">{children}</div>;
+    return (
+      <div
+        className="custom-link no-routes-fallback"
+        onMouseDown={handlePress}
+        onMouseUp={handleRelease}
+        style={(handlePress || handleRelease) && { cursor: "pointer" }}
+      >
+        {children}
+      </div>
+    );
   }
   let resolved = useResolvedPath(to);
   let match = useMatch({ path: resolved.pathname, end: true });

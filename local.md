@@ -30,7 +30,7 @@ For casual users who just want to discover some new music with full-screen visua
 
 **https://lewhunt.github.io/mixmotion**
 
-On playing a music set, you'll enter playback mode with dynamic background effects. Below is a quick video of the app transitioning into playback mode (give the video a tap if it doesn't autoplay):
+On playing a music set, you'll enter playback mode with dynamic background effects. Below is a quick video of the app transitioning between playback modes (give the video a tap if it doesn't autoplay):
 
 https://github.com/lewhunt/mixmotion/assets/9886284/990053e1-66ba-45ef-b065-fbe87f34a747
 
@@ -110,8 +110,9 @@ Built with React TypeScript, it's packaged using <a href="https://vitejs.dev/" t
 | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
 | `url`                 | The Mixcloud URL of the content to play <br />◦ Most URLs are supported such as playlists, users, genres, tags and individual shows/sets <br />◦ This can be a full URL or a partial Mixcloud key                       | null    |
 | `showsData`           | An array of locally stored shows data that can be used instead of a URL. <br />◦ The app utilises this for local-storage saved shows.                                                                                   | null    |
-| `backdropVideoList`   | A string array of background video URLs which appear in a random sequence during playback when there is no user activity <br />◦ Note: Cross-origin videos are currently disabled to conserve bandwidth quota           | null    |
+| `backdropVideoList`   | A string array of background video URLs which appear in a random sequence during playback mode when there is no user activity                                                                                           | null    |
 | `enableBackdropVideo` | Set to `true` to show the above background videos when there is no user activity. <br />◦ The video toggle button in the UI will override this                                                                          | `false` |
+| `enableUserLink`      | Set to `true` to turn the user/artist sub-title into a router link (used in the deployed app)                                                                                                                           | `false` |
 | `collapsed`           | Set to `true` to minimise the player metadata and controls, in order to make space for other content. <br />◦ Used in the app for home and search page content.                                                         | `false` |
 | `activityTimeout`     | Override the timeout period of user inactivity, which then triggers an 'innactive mode' during playback to show full dynamic visuals <br/>◦ Used in the app to provide longer timeout periods in home and search pages. | `4000`  |
 | `showWidget`          | Display the official Mixcloud widget at bottom of page - with its own controls and progress bar - instead of the custom progress bar. <br />◦ The official widget does not support arrow-key navigation for TV devices. | `false` |
@@ -236,7 +237,7 @@ console.log("Current title: ", title);
 
 <hr>
 
-## Screenshots and Videos
+## App Screenshots and Videos
 
 | [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-player-example-03.jpg)](https://lewhunt.github.io/mixmotion/) | [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-player-example-04.jpg)](https://lewhunt.github.io/mixmotion/) |
 | :-----------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -246,7 +247,7 @@ console.log("Current title: ", title);
 
 [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-player-example-02.jpg)](https://lewhunt.github.io/mixmotion/)
 
-<p align='center'><i>Search UI</i>
+<p align='center'><i>Search UI (in the deployed app)</i>
 
 &nbsp;
 

@@ -50,6 +50,7 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
     backdropVideoList,
     activityTimeout,
     showWidget,
+    enableUserLink,
   } = props;
   const { focusKey, ref } = useFocusable();
 
@@ -397,9 +398,15 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
           {!collapsed && username && (
             <FocusContext.Provider value={focusKey}>
               <div className="metadata metadata--subTitle">
-                <CustomLink to={`/${username}`}>
-                  {subTitle && _.truncate(subTitle, { length: 30 })}
-                </CustomLink>
+                {enableUserLink ? (
+                  <CustomLink to={`/${username}`}>
+                    {subTitle && _.truncate(subTitle, { length: 30 })}
+                  </CustomLink>
+                ) : (
+                  <div className="custom-link">
+                    {subTitle && _.truncate(subTitle, { length: 30 })}
+                  </div>
+                )}
               </div>
             </FocusContext.Provider>
           )}
