@@ -48,8 +48,8 @@ export const CustomLink: React.FC<CustomLinkProps> = ({
       </div>
     );
   }
-  let resolved = useResolvedPath(to);
-  let match = useMatch({ path: resolved.pathname, end: true });
+  const resolved = useResolvedPath(to);
+  const match = useMatch({ path: resolved.pathname, end: true });
   const location = useLocation();
   const navigate = useNavigate();
   const category = useStore((s) => s.category);
