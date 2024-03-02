@@ -24,7 +24,7 @@ const backdropVideoList = [
   "./sample-backdrops/lightning-light-design-star.mp4",
   "./sample-backdrops/circuit-camera-movement.mp4",
   "./sample-backdrops/glowing-spheres-particles.mp4",
-  "./sample-backdrops/satellite-moon-planet-space.mp4",
+  "./sample-backdrops/star-space-color-dodge.mp4",
 ];
 
 function Demo() {
