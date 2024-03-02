@@ -32,7 +32,7 @@ For casual users who just want to discover some new music with full-screen visua
 
 On playing a music set, you'll enter playback mode with dynamic background effects. Below is a quick video of the app transitioning between playback modes (give the video a tap if it doesn't autoplay):
 
-https://github.com/lewhunt/mixmotion/assets/9886284/990053e1-66ba-45ef-b065-fbe87f34a747
+https://github.com/lewhunt/mixmotion/assets/9886284/74e6276c-a314-4250-8b15-0f0907bc0583
 
 More screenshots and videos at the end of this doc.
 
@@ -52,7 +52,7 @@ After install, import the player and render MixmotionPlayer in your own app with
 
 ```jsx
 import { useEffect, useState } from "react";
-import MixmotionPlayer from "mixmotion-player";
+import { MixmotionPlayer } from "mixmotion-player";
 
 function Demo() {
   const [url, setUrl] = useState("");
@@ -186,7 +186,7 @@ function Demo() {
 
 ## useSavedItems Hook
 
-This custom hook is used to update and retrieve shows that are favourited/liked by the user. The below snippet from the advanced demo illustrates how to load the player with local data, in this case, the saved items.
+This custom hook is used to update and retrieve shows that are favourited/liked by the user. The below snippet from the advanced demo illustrates how to load the player with local saved data.
 
 ```jsx
 import MixmotionPlayer, {
@@ -247,13 +247,26 @@ console.log("Current title: ", title);
 
 [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-player-example-02.jpg)](https://lewhunt.github.io/mixmotion/)
 
-<p align='center'><i>Search UI (in the deployed app)</i>
+<p align='center'><i>Search Page (from the deployed app)</i>
 
 &nbsp;
 
-[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-player-example-02.jpg)](https://lewhunt.github.io/mixmotion/)
+https://github.com/lewhunt/mixmotion/assets/9886284/fe234146-28f5-49ca-8786-d2efde7f7476
 
-<p align='center'><i>Playback UI</i>
+<p align='center'><i>Playback Mode (example 1)</i>
+
+&nbsp;
+
+
+https://github.com/lewhunt/mixmotion/assets/9886284/3eac30ea-ae4b-4916-9615-3cc38ff6b213
+
+<p align='center'><i>Playback Mode (example 2)</i>
+
+&nbsp;
+
+https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce6a91fdcb
+
+<p align='center'><i>Playback Mode (example 3)</i>
 
 &nbsp;
 
