@@ -64,6 +64,7 @@ const keysWithCoverImage = [
   "/ministryofsound/rebūke-x-playground-live-mix-ministry-of-sound/",
   "/ministryofsound/ibiza-end-of-season-mini-mix-2022-ministry-of-sound/",
   "/ministryofsound/workforce-x-drum-bass-sessions-mix-ministry-of-sound/",
+  "/oNlineRXD/",
 ];
 
 export const fetchShows = async ({
@@ -83,7 +84,9 @@ export const fetchShows = async ({
     data?.filter((show) => {
       const isUnwantedKey = unplayableKeys.includes(show.key);
       const passesExclusivity = withExclusives ? true : !show.is_exclusive;
-      const shouldEnableCoverImage = keysWithCoverImage.includes(show.key);
+      const shouldEnableCoverImage =
+        keysWithCoverImage.includes(show.key) ||
+        keysWithCoverImage.includes(show.user.key);
       if (shouldEnableCoverImage) show.enable_cover_image = true;
       return !isUnwantedKey && passesExclusivity;
     });

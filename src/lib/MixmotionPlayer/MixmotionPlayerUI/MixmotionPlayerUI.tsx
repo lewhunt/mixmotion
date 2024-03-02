@@ -186,8 +186,6 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
     [startTouch, handleNext, handlePrevious]
   );
 
-  useEffect(() => actions.setBackdropCoverImageToggle(collapsed), [collapsed]);
-
   useEffect(() => {
     player?.setVolume(volume);
   }, [player, volume]);

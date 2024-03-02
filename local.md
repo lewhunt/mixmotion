@@ -30,7 +30,7 @@ For casual users who just want to discover some new music with full-screen visua
 
 **https://lewhunt.github.io/mixmotion**
 
-On playing a music set, you'll enter playback mode with dynamic background effects. Below is a quick video of the app transitioning between playback modes (give the video a tap if it doesn't autoplay):
+On playing a set, you'll enter playback mode with dynamic background effects. Below is a quick video of the app transitioning between playback modes (give the video a tap if it doesn't autoplay):
 
 https://github.com/lewhunt/mixmotion/assets/9886284/74e6276c-a314-4250-8b15-0f0907bc0583
 
@@ -40,7 +40,7 @@ More screenshots and videos at the end of this doc.
 
 ## Installation
 
-Developers can also install the player as an open source component to use in their own React apps:
+Developers can also install Mixmotion Player as an open source component to use in React apps. Quickest install method is via the npm i command below. Or integrate it manually for more control by grabbing the lib folder in this repo along with the associated dependencies.
 
 ```bash
 npm install mixmotion-player
@@ -69,7 +69,7 @@ export default Demo;
 
 ### Advanced Usage
 
-The <a href='https://github.com/lewhunt/mixmotion/blob/main/src/DemoAdvanced.tsx'>advanced demo</a> and deployed <a href='https://lewhunt.github.io/mixmotion'>web app</a> illustrate how the component can be customised further. Props are specified for custom buttons, video backgrounds and local data (saved items). A complete list of props are detailed further down this page.
+The <a href='https://github.com/lewhunt/mixmotion/blob/main/src/DemoAdvanced.tsx'>advanced demo</a> and official <a href='https://lewhunt.github.io/mixmotion'>web app</a> illustrate how the component can be customised further. Props are specified for custom buttons, video backgrounds and local data (saved items). A complete list of props are detailed further down this page.
 
 ```jsx
 <MixmotionPlayer
@@ -87,18 +87,18 @@ The <a href='https://github.com/lewhunt/mixmotion/blob/main/src/DemoAdvanced.tsx
 
 There are plenty of web players and widgets already available from the likes of Soundcloud and Mixcloud that you can integrate into your app.
 
-Mixmotion offers a more immersive, full-screen experience with unique dynamic visuals, while still providing free access to Mixcloud's vast music catalogue.
+Mixmotion offers something a bit different; a more immersive, full-screen experience with unique visual effects, while still providing free access to Mixcloud's vast music catalogue.
 
 ## What Sets It Apart?
 
 - <b>Mixcloud Integration</b>: Simple yet versatile access to Mixcloud content that goes beyond their official widget. Access playlists, user sets, genres, tags and individual shows, with the ability to privately save favourites via local storage and share mixes.
-- <b>Dynamic Visuals</b>: Artwork combined with canvas effects and video motion backgrounds generate a captivating blend of imagery for a rich, immersive music player.
+- <b>Dynamic Visuals</b>: Artwork combined with canvas effects and video motion backgrounds generate a captivating blend of imagery in a rich, immersive music player.
 - <b>Broad Device Support</b>: Designed for mobile, desktop and TV devices. Touch, cursor and arrow-key navigation help make the user experience smooth across platforms.
 - <b>Future Considerations</b>: Integration with local file paths, audio streams and other music services like Soundcloud. Real-time audio visualizations and beat detection are also being considered.
 
 ## How Does It Work?
 
-Under the hood, the component is built on top of the official <a href="https://www.mixcloud.com/developers/" target="_blank">Mixcloud API</a> and <a href="https://www.mixcloud.com/developers/widget/" target="_blank">Mixcloud Widget</a>. It also utilises another custom component of mine - Dynamic Backdrop - to create the blended mix of imagery transforms, canvas animations and video backgrounds.
+Under the hood, the component is built on top of the official <a href="https://www.mixcloud.com/developers/" target="_blank">Mixcloud API</a> and <a href="https://www.mixcloud.com/developers/widget/" target="_blank">Mixcloud Widget</a>. It also utilises another custom component of mine - Dynamic Backdrop - to create the blended mix of transforms, canvas animations and video backgrounds.
 
 Built with React TypeScript, it's packaged using <a href="https://vitejs.dev/" target="_blank">Vite</a> to generate an installable npm component library.
 
@@ -147,7 +147,7 @@ Callback props get fired on various player events, so you can take further actio
 As illustrated in the advanced demo, the player can be overridden with custom buttons. There is a selection of pre-built action types with their own icons and behaviours or you can add your own with the "custom" action type.
 
 ```jsx
-import MixmotionPlayer, { ButtonProps } from "mixmotion-player";
+import { MixmotionPlayer, ButtonProps } from "mixmotion-player";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const customButtons: ButtonProps[] = [
@@ -189,7 +189,7 @@ function Demo() {
 This custom hook is used to update and retrieve shows that are favourited/liked by the user. The below snippet from the advanced demo illustrates how to load the player with local saved data.
 
 ```jsx
-import MixmotionPlayer, {
+import { MixmotionPlayer,
   useSavedItems,
   ShowsDataType
 } from "./lib/MixmotionPlayer";
@@ -223,7 +223,7 @@ For more control you can import the `useStore` custom hook to globally access pl
 
 ```jsx
 // 1. import useStore
-import MixmotionPlayer, { useStore } from "mixmotion-player";
+import { MixmotionPlayer, useStore } from "mixmotion-player";
 
 // 2. get desired state values
 const playing = useStore((s) => s.playing);
@@ -247,7 +247,7 @@ console.log("Current title: ", title);
 
 [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-player-example-02.jpg)](https://lewhunt.github.io/mixmotion/)
 
-<p align='center'><i>Search Page (from the deployed app)</i>
+<p align='center'><i>Search Page</i>
 
 &nbsp;
 
@@ -256,7 +256,6 @@ https://github.com/lewhunt/mixmotion/assets/9886284/fe234146-28f5-49ca-8786-d2ef
 <p align='center'><i>Playback Mode (example 1)</i>
 
 &nbsp;
-
 
 https://github.com/lewhunt/mixmotion/assets/9886284/3eac30ea-ae4b-4916-9615-3cc38ff6b213
 
@@ -270,6 +269,21 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 
 &nbsp;
 
+## Support
+
+[ :speech_balloon: Fire over a comment](https://github.com/lewhunt/mixmotion/issues) if you have any feedback, requests or issues :bug:
+
+[:star: Smash us a Github star](https://github.com/lewhunt/mixmotion) to show your appreciation :pray:
+
+[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) to support the creators :heavy_dollar_sign:
+
+## Featured users and sets
+
+[a shared list of featured users and mixes can go here]
+&nbsp;
+
 ### [👉 Try out the App](https://lewhunt.github.io/mixmotion/)
 
 **https://lewhunt.github.io/mixmotion**
+
+&nbsp;
