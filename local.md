@@ -32,7 +32,7 @@ For casual users who just want to discover some new music with full-screen visua
 
 On playing a set, you'll enter playback mode with dynamic background effects. Below is a quick video of the app transitioning between playback modes (give the video a tap if it doesn't autoplay):
 
-https://github.com/lewhunt/mixmotion/assets/9886284/74e6276c-a314-4250-8b15-0f0907bc0583
+https://github.com/lewhunt/mixmotion/assets/9886284/95a2116f-5e4c-47fc-af65-6e65a53a0048
 
 More screenshots and videos at the end of this doc.
 
