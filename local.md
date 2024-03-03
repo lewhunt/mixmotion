@@ -18,7 +18,7 @@
 <p align='center'>
 An open source music player that blends together Mixcloud audio with dynamic visual effects to create some captivating moments</p>
 
-[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-3.jpg)](https://lewhunt.github.io/mixmotion/)
+[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-4.jpg)](https://lewhunt.github.io/mixmotion/)
 
 <p align='center'><i>Click on the image to try out the Mixmotion app</i>
 
@@ -26,7 +26,7 @@ An open source music player that blends together Mixcloud audio with dynamic vis
 
 For casual users who just want to discover some new music with full-screen visuals, hit the image above or link below to launch the Mixmotion web app on your mobile, desktop or TV device.
 
-### [👉 Try out the App](https://lewhunt.github.io/mixmotion/)
+### [:point_right: Try out the App :point_left:](https://lewhunt.github.io/mixmotion/)
 
 **https://lewhunt.github.io/mixmotion**
 
@@ -273,16 +273,24 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 
 [ :speech_balloon: Fire over a comment](https://github.com/lewhunt/mixmotion/issues) if you have any feedback, requests or issues :bug:
 
-[:star: Smash us a Github star](https://github.com/lewhunt/mixmotion) to show your appreciation :pray:
+[:star: Smash us a Github star](https://github.com/lewhunt/mixmotion) to show your appreciation if you like the app or component :pray:
 
-[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) to support the creators :heavy_dollar_sign:
+[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) via the app or the list below to support the creators :raised_hands:
 
 ## Featured users and sets
 
-[a shared list of featured users and mixes can go here]
-&nbsp;
+A list of some cool sets and users that were discovered in the app.
 
-### [👉 Try out the App](https://lewhunt.github.io/mixmotion/)
+- https://lewhunt.github.io/mixmotion/#/LC_Brown/making-progress-20/
+- https://lewhunt.github.io/mixmotion/#/MarkusSchulz/gdjbsunriseset2019/
+- https://lewhunt.github.io/mixmotion/#/cesarescorcia9/podcast-episode-184-throwback-edition-mixed-by-cesar-escorcia/
+- https://lewhunt.github.io/mixmotion/#/kickup80s/the-eighties-mix-1/
+- https://lewhunt.github.io/mixmotion/#/oNlineRXD/
+- https://lewhunt.github.io/mixmotion/#/cesarescorcia9/
+
+  &nbsp;
+
+## [:point_right: Try out the App :point_left:](https://lewhunt.github.io/mixmotion/)
 
 **https://lewhunt.github.io/mixmotion**
 
