@@ -18,7 +18,7 @@
 <p align='center'>
 An open source music player that blends together Mixcloud audio with dynamic visual effects to create some captivating moments</p>
 
-[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-4.jpg)](https://lewhunt.github.io/mixmotion/)
+[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-6.jpg)](https://lewhunt.github.io/mixmotion/)
 
 <p align='center'><i>Click on the image to try out the Mixmotion app</i>
 
