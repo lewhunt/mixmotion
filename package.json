@@ -7,7 +7,7 @@
   "type": "module",
   "homepage": "https://lewhunt.github.io/mixmotion",
   "repository": "https://github.com/lewhunt/mixmotion.git",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "vite",
     "start": "npm run dev -- --port 3000 --host",

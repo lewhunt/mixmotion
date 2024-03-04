@@ -290,6 +290,14 @@ A list of some cool sets and users that were discovered in the app.
 
   &nbsp;
 
+  ## License
+
+  The Mixmotion Player component in this main branch is licensed under the open source GPL-3.0 license. For licensing information, please see the [LICENSE](./LICENSE) file.
+  &nbsp;
+  Please note that while the Mixmotion Player component used in the deployed application is licensed under the GPL-3.0 license and is open-source, the deployed application itself is not yet open-source.
+
+  &nbsp;
+
 ## [:point_right: Try out the App :point_left:](https://lewhunt.github.io/mixmotion/)
 
 **https://lewhunt.github.io/mixmotion**
