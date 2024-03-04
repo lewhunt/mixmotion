@@ -251,6 +251,12 @@ console.log("Current title: ", title);
 
 &nbsp;
 
+[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-4.jpg)](https://lewhunt.github.io/mixmotion/)
+
+<p align='center'><i>Playback Mode</i>
+
+&nbsp;
+
 https://github.com/lewhunt/mixmotion/assets/9886284/fe234146-28f5-49ca-8786-d2efde7f7476
 
 <p align='center'><i>Playback Mode (example 1)</i>
