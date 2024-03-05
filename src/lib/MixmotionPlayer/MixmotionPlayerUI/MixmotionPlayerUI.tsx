@@ -96,7 +96,7 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
 
   const playerButtons: ButtonProps[] = customButtons || [
     { action: "save", align: "left" },
-    { action: "mute", align: "left" },
+    { action: backdropVideoList?.length ? "videos" : "mute", align: "left" },
     { action: "previous" },
     { action: "playpause" },
     { action: "next" },

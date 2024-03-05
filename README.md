@@ -111,13 +111,13 @@ Built with React TypeScript, it's packaged using <a href="https://vitejs.dev/" t
 | `url`                 | The Mixcloud URL of the content to play <br />◦ Most URLs are supported such as playlists, users, genres, tags and individual shows/sets <br />◦ This can be a full URL or a partial Mixcloud key                       | null    |
 | `showsData`           | An array of locally stored shows data that can be used instead of a URL. <br />◦ The app utilises this for local-storage saved shows.                                                                                   | null    |
 | `backdropVideoList`   | A string array of background video URLs which appear in a random sequence during playback mode when there is no user activity                                                                                           | null    |
-| `enableBackdropVideo` | Set to `true` to show the above background videos when there is no user activity. <br />◦ The video toggle button in the UI will override this                                                                          | `false` |
+| `enableBackdropVideo` | Set to `true` to show the above background videos when there is no user activity. <br />◦ The video toggle button in the UI (and local storage flag) will override this                                                 | `false` |
 | `enableUserLink`      | Set to `true` to turn the user/artist sub-title into a react-router link. (used in the deployed app)                                                                                                                    | `false` |
 | `collapsed`           | Set to `true` to minimise the player metadata and controls, in order to make space for other content. <br />◦ Used in the app for home and search page content.                                                         | `false` |
 | `activityTimeout`     | Override the timeout period of user inactivity, which then triggers an 'innactive mode' during playback to show full dynamic visuals <br/>◦ Used in the app to provide longer timeout periods in home and search pages. | `4000`  |
 | `showWidget`          | Display the official Mixcloud widget at bottom of page - with its own controls and progress bar - instead of the custom progress bar. <br />◦ The official widget does not support arrow-key navigation for TV devices. | `false` |
-| `width`               | Override the width of the player. <br/>◦ Note: full-screen is the intended user experience, with content positioned above UI controls                                                                                   | `100%`  |
-| `height`              | Override the height of the player. <br/>◦ Note: full-screen is the intended user experience, with content positioned above UI controls                                                                                  | `100%`  |
+| `width`               | Override the width of the player. <br/>◦ Note: full-screen is the intended user experience, with content layered over <br/>◦ You may need to modify the CSS if you override width                                       | `100%`  |
+| `height`              | Override the height of the player. <br/>◦ Note: full-screen is the intended user experience, with content layered over <br/>◦ You may need to modify the CSS if you override height                                     | `100%`  |
 | `customButtons`       | Specify a collection of [custom buttons](#custom-buttons) for the player UI <br />&nbsp; ◦ &nbsp;A set of default buttons will be used if none are specified.                                                           | `null`  |
 | `autoplay`            | Set to `false` to disable the attempt to auto-play content                                                                                                                                                              | `true`  |
 | `withExclusives`      | Set to `true` to include exclusive content from the Mixcloud API. <br />◦ Note: exclusive content is unlikely to play without further development to support Mixcloud user sign-in authentication                       | `false` |
@@ -281,7 +281,7 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 
 [:star: Smash us a Github star](https://github.com/lewhunt/mixmotion) to show your appreciation if you like the app or component :pray:
 
-[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) via the app or in the list below to support the creators :raised_hands:
+[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) from the app's share link to support the creators :raised_hands:
 
 ## Featured users and sets
 
@@ -300,7 +300,7 @@ A list of some cool sets and users that were discovered in the app.
 
   The Mixmotion Player component in this main branch is licensed under the open source GPL-3.0 license. For licensing information, please see the [LICENSE](./LICENSE) file.
   &nbsp;
-  Please note that while the Mixmotion Player component used in the deployed application is licensed under the GPL-3.0 license and is open-source, the deployed application itself is not yet open-source.
+  Please note that while the Mixmotion Player component used in the deployed application is licensed under the GPL-3.0 license, the deployed application itself is not yet open-source.
 
   &nbsp;
 
