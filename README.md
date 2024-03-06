@@ -69,7 +69,7 @@ export default Demo;
 
 ### Advanced Usage
 
-The <a href='https://github.com/lewhunt/mixmotion/blob/main/src/DemoAdvanced.tsx'>advanced demo</a> and official <a href='https://lewhunt.github.io/mixmotion'>web app</a> illustrate how the component can be customised further. Props are specified for custom buttons, video backgrounds and local data (saved items). A complete list of props are detailed further down this page.
+The <a href='https://github.com/lewhunt/mixmotion/blob/main/src/DemoAdvanced.tsx'>advanced demo</a> and official <a href='https://lewhunt.github.io/mixmotion/'>web app</a> illustrate how the component can be customised further. Props are specified for custom buttons, video backgrounds and local data (saved items). A complete list of props are detailed further down this page.
 
 ```jsx
 <MixmotionPlayer
@@ -87,7 +87,7 @@ The <a href='https://github.com/lewhunt/mixmotion/blob/main/src/DemoAdvanced.tsx
 
 There are plenty of web players and widgets already available from the likes of Soundcloud and Mixcloud that you can integrate into your app.
 
-Mixmotion offers something a bit different; a more immersive, full-screen experience with unique visual effects, while still providing free access to Mixcloud's vast music catalogue.
+Mixmotion offers something a bit different; an immersive, full-screen experience with unique visual effects, still providing free access to Mixcloud's vast music catalogue.
 
 ## What Sets It Apart?
 
@@ -279,30 +279,9 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 
 [ :speech_balloon: Fire over a comment](https://github.com/lewhunt/mixmotion/issues) if you have any feedback, requests or issues :bug:
 
-[:star: Smash us a Github star](https://github.com/lewhunt/mixmotion) to show your appreciation if you like the app or component :pray:
+[:star: Smash us a Github star](https://github.com/lewhunt/mixmotion) if you like the app or component :pray:
 
-[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) via the app or in the list below to support the creators :raised_hands:
-
-## Featured users and sets
-
-A list of some cool sets and users that were discovered in the app.
-
-- https://lewhunt.github.io/mixmotion/#/LC_Brown/making-progress-20/
-- https://lewhunt.github.io/mixmotion/#/MarkusSchulz/gdjbsunriseset2019/
-- https://lewhunt.github.io/mixmotion/#/cesarescorcia9/podcast-episode-184-throwback-edition-mixed-by-cesar-escorcia/
-- https://lewhunt.github.io/mixmotion/#/kickup80s/the-eighties-mix-1/
-- https://lewhunt.github.io/mixmotion/#/oNlineRXD/
-- https://lewhunt.github.io/mixmotion/#/cesarescorcia9/
-
-  &nbsp;
-
-  ## License
-
-  The Mixmotion Player component in this main branch is licensed under the open source GPL-3.0 license. For licensing information, please see the [LICENSE](./LICENSE) file.
-  &nbsp;
-  Please note that while the Mixmotion Player component used in the deployed application is licensed under the GPL-3.0 license and is open-source, the deployed application itself is not yet open-source.
-
-  &nbsp;
+[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) in the app to support the creators :raised_hands:
 
 ## [:point_right: Try out the App :point_left:](https://lewhunt.github.io/mixmotion/)
 
