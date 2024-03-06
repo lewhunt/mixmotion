@@ -275,6 +275,12 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 
 &nbsp;
 
+[![Mixmotion video on YouTube](https://lewhunt.github.io/assets/readme/mm-player-example.jpg)](https://www.youtube.com/watch?v=_oPRTqFwmRs)
+
+<p align='center'><i>YouTube video clip</i>
+
+&nbsp;
+
 ## Support
 
 [ :speech_balloon: Fire over a comment](https://github.com/lewhunt/mixmotion/issues) if you have any feedback, requests or issues :bug:
