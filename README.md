@@ -7,7 +7,7 @@
     <img src='https://img.shields.io/npm/v/mixmotion-player.svg' alt='Latest npm version'>
   </a>
     <a href='https://github.com/lewhunt/mixmotion/blob/main/LICENSE' target="_blank">
-    <img src='https://img.shields.io/badge/License-GPLv3-yellow.svg' alt='GPLv3 License'>
+     <img src='https://img.shields.io/badge/License-MIT-yellow.svg' alt='MIT License'>
   </a>
     <a href='https://www.npmjs.com/package/mixmotion-player' target="_blank">
     <img src='https://img.shields.io/npm/dm/mixmotion-player.svg' alt='Monthly npm downloads'>
@@ -288,4 +288,3 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 ## [:point_right: Try out the App :point_left:](https://lewhunt.github.io/mixmotion/)
 
 **https://lewhunt.github.io/mixmotion**
-
