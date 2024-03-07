@@ -16,7 +16,7 @@
 </p>
 
 <p align='center'>
-An immersive music player with Mixcloud integration and stunning fullscreen visuals</p>
+An immersive music player with Mixcloud integration and stunning visual effects</p>
 
 [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-6.jpg)](https://lewhunt.github.io/mixmotion/)
 
