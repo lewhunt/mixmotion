@@ -72,7 +72,6 @@ export type MixmotionPlayerProps = {
   onBuffering?: () => void;
   onEnded?: () => void;
   onError?: (error: any) => void;
-  onProgress?: (seconds: number) => void;
   onPlay?: () => void;
   onPause?: () => void;
   onReady?: (player: any) => void;

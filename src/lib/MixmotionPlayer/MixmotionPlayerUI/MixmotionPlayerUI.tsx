@@ -176,9 +176,11 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
       const sensitivity = 50;
       if (Math.abs(deltaX) > sensitivity || Math.abs(deltaY) > sensitivity) {
         if (Math.abs(deltaX) > Math.abs(deltaY)) {
+          if (touch.clientY / window.innerHeight > 0.8) return;
           deltaX > 0 ? handlePrevious() : handleNext();
         } else {
           actions.setCollapsed(deltaY > 0);
+          actions.setBackdropCoverImageToggle(deltaY > 0);
         }
         setStartTouch(null);
       }

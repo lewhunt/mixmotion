@@ -1,5 +1,5 @@
 import cn from "classnames";
-import React, { useRef, useCallback } from "react";
+import React, { useRef, useCallback, useEffect } from "react";
 import { useStore } from "../hooks";
 import ControlButton from "./PlayerButton";
 import { formatTime } from "./../utils";
@@ -9,14 +9,16 @@ import "./progress-bar.scss";
 function ProgressBar() {
   const barRef = useRef<HTMLDivElement>(null);
   const isPressed = useRef<boolean>(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
   const actions = useStore((s) => s.actions);
   const duration = useStore((s) => s.duration) || 0;
   const progress = useStore((s) => s.progress);
   const player = useStore((s) => s.player);
+  const playing = useStore((s) => s.playing);
 
   const currentTime = progress || 0;
   const progressPercentage = (currentTime / duration) * 100;
-  const skipIncrement = duration / 30;
+  const skipIncrement = duration / 20;
 
   const handleSkipBack = useCallback(() => {
     player && progress && player.seek(progress - skipIncrement);
@@ -78,6 +80,31 @@ function ProgressBar() {
     },
     [isPressed, player, currentTime]
   );
+
+  const updateProgress = useCallback(async () => {
+    if (player) {
+      try {
+        const seconds: number = await player.getPosition();
+        actions.setProgress(seconds);
+      } catch (error) {
+        console.error("Error getting position:", error);
+      }
+    }
+  }, [player, actions]);
+
+  useEffect(() => {
+    if (playing && !isPressed.current) {
+      timerRef.current = setInterval(updateProgress, 100);
+    } else {
+      clearInterval(timerRef.current!);
+    }
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [updateProgress, playing, isPressed]);
 
   return (
     <div className={cn("progress-bar")} data-testid="progress-bar">

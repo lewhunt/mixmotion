@@ -16,7 +16,7 @@
 </p>
 
 <p align='center'>
-An open source music player that blends together Mixcloud audio with dynamic visual effects</p>
+Stream Mixcloud music with captivating visual effects</p>
 
 [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-6.jpg)](https://lewhunt.github.io/mixmotion/)
 
@@ -30,7 +30,7 @@ For casual users who just want to discover some new music with full-screen visua
 
 **https://lewhunt.github.io/mixmotion**
 
-On playing a set, you'll enter playback mode with dynamic background effects appearing after a few seconds of user inactivity. Below is a quick video of the app transitioning between playback modes (give the video a tap if it doesn't autoplay):
+On playing a set, you'll enter playback mode with dynamic background effects appearing after a few seconds of user inactivity. Below is a quick video of the app transitioning between playback modes (give the page a refresh if it doesn't play):
 
 https://github.com/lewhunt/mixmotion/assets/9886284/95a2116f-5e4c-47fc-af65-6e65a53a0048
 
@@ -138,7 +138,6 @@ Callback props get fired on various player events, so you can take further actio
 | `onBuffering` | Called when media starts buffering                                     |
 | `onEnded`     | Called when media finishes playing<br />&nbsp                          |
 | `onError`     | Called when an error occurs whilst attempting to play media            |
-| `onProgress`  | Called when playback is progressing                                    |
 
 <hr>
 
@@ -277,7 +276,7 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 
 [![Mixmotion video on YouTube](https://lewhunt.github.io/assets/readme/mm-player-example.jpg)](https://www.youtube.com/watch?v=_oPRTqFwmRs)
 
-<p align='center'><i>YouTube video clip</i>
+<p align='center'><i>Click to view video promo on YouTube</i>
 
 &nbsp;
 

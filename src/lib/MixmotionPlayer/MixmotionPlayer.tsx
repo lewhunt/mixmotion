@@ -27,7 +27,6 @@ export const MixmotionPlayer: React.FC<MixmotionPlayerProps> = (props) => {
     onBuffering,
     onEnded,
     onError,
-    onProgress,
   } = props;
 
   init({
@@ -128,12 +127,6 @@ export const MixmotionPlayer: React.FC<MixmotionPlayerProps> = (props) => {
           onEnded?.();
         });
 
-        widget.events.progress.on((seconds: number) => {
-          // only update progress state when activity enabled
-          actions.setProgress(seconds);
-          onProgress?.(seconds);
-        });
-
         widget.events.buffering.on(() => {
           actions.setLoaded(false);
           onBuffering?.();
@@ -212,7 +205,7 @@ export const MixmotionPlayer: React.FC<MixmotionPlayerProps> = (props) => {
           {children}
         </>
       )}
-      {!loaded && !showUnavailable && <MixmotionSpinner />}
+      {!loaded && !showUnavailable && activity && <MixmotionSpinner />}
     </div>
   );
 };
