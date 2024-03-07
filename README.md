@@ -16,7 +16,7 @@
 </p>
 
 <p align='center'>
-Stream Mixcloud music with captivating visual effects</p>
+An immersive music player with Mixcloud integration and stunning fullscreen visuals</p>
 
 [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-6.jpg)](https://lewhunt.github.io/mixmotion/)
 
@@ -24,7 +24,7 @@ Stream Mixcloud music with captivating visual effects</p>
 
 ## How to use
 
-For casual users who just want to discover some new music with full-screen visuals, hit the image above or link below to launch the Mixmotion web app on your mobile, desktop or TV device.
+For casual users who just want to discover some new music with fullscreen visuals, hit the image above or link below to launch the Mixmotion web app on your mobile, desktop or TV device.
 
 ### [:point_right: Try out the App :point_left:](https://lewhunt.github.io/mixmotion/)
 
