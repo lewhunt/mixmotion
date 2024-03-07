@@ -44,6 +44,7 @@ export const MixmotionPlayer: React.FC<MixmotionPlayerProps> = (props) => {
   const showIndex = useStore((s) => s.showIndex) || 0;
   const scriptLoaded = useStore((s) => s.scriptLoaded);
   const showUnavailable = useStore((s) => s.showUnavailable);
+  const playing = useStore((s) => s.playing);
 
   const iframeRef = useRef<HTMLIFrameElement>(null);
   const timer = useRef<any>(null);
@@ -205,7 +206,7 @@ export const MixmotionPlayer: React.FC<MixmotionPlayerProps> = (props) => {
           {children}
         </>
       )}
-      {!loaded && !showUnavailable && activity && <MixmotionSpinner />}
+      {!loaded && !showUnavailable && !playing && <MixmotionSpinner />}
     </div>
   );
 };
