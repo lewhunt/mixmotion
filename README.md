@@ -30,7 +30,7 @@ For casual users who just want to discover some new music with full-screen visua
 
 **https://lewhunt.github.io/mixmotion**
 
-On playing a set, you'll enter playback mode with dynamic background effects appearing after a few seconds of user inactivity. Below is a quick video of the app transitioning between playback modes (give the page a refresh if it doesn't play):
+On playing a set, you'll enter playback mode with dynamic background effects appearing after a few seconds of user inactivity. Below is a quick video of the app transitioning between playback modes:
 
 https://github.com/lewhunt/mixmotion/assets/9886284/95a2116f-5e4c-47fc-af65-6e65a53a0048
 
