@@ -1,13 +1,13 @@
 {
   "name": "mixmotion-player",
   "author": "Lewis Hunt",
-  "description": "Stream new music with captivating visuals. Mixmotion Player is an open source music player that blends together Mixcloud audio with dynamic visual effects to create some captivating moments",
+  "description": "Stream new music with captivating visuals. Mixmotion is a React audio player with Mixcloud integration and fullscreen dynamic visuals giving a rich, immersive listening experience",
   "private": false,
-  "version": "1.0.25",
+  "version": "1.0.26",
   "type": "module",
   "homepage": "https://lewhunt.github.io/mixmotion",
   "repository": "https://github.com/lewhunt/mixmotion.git",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "scripts": {
     "dev": "vite",
     "start": "npm run dev -- --port 3000 --host",
