@@ -7,7 +7,7 @@
     <img src='https://img.shields.io/npm/v/mixmotion-player.svg' alt='Latest npm version'>
   </a>
     <a href='https://github.com/lewhunt/mixmotion/blob/main/LICENSE' target="_blank">
-     <img src='https://img.shields.io/badge/License-MIT-yellow.svg' alt='MIT License'>
+      <img src='https://img.shields.io/badge/License-GPLv3-yellow.svg' alt='GPLv3 License'>
   </a>
     <a href='https://www.npmjs.com/package/mixmotion-player' target="_blank">
     <img src='https://img.shields.io/npm/dm/mixmotion-player.svg' alt='Monthly npm downloads'>
@@ -16,7 +16,7 @@
 </p>
 
 <p align='center'>
-An immersive music player with Mixcloud integration and stunning visual effects</p>
+An immersive music player with Mixcloud integration and dynamic visual effects</p>
 
 [![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-6.jpg)](https://lewhunt.github.io/mixmotion/)
 
