@@ -40,23 +40,17 @@ More screenshots and videos at the end of this doc.
 
 ## Installation
 
-Developers can also install Mixmotion Player as an open source component to use in React apps. Quickest install method is via the npm i command below or via cdn. Alternatively, integrate it manually by grabbing the lib folder in this repo along with the associated dependencies.
-
-##### Install via npm package (recommended):
+Developers can also install Mixmotion Player as an open source component to use in React apps. Quickest install method is via the npm i command below. Alternatively, integrate it manually by grabbing the lib folder in this repo along with the associated dependencies.
 
 ```bash
 npm install mixmotion-player
 ```
 
-Or install & import directly via CDN ([see demo in CodePen](https://codepen.io/lewhunt/pen/XWQNgpe))
-
-```bash
-import { MixmotionPlayer } from 'https://esm.sh/mixmotion-player/dist/mixmotion-player.js';
-```
-
 ### Basic Usage
 
 Import the player and render MixmotionPlayer in your own app with a Mixcloud URL. It will use default settings for the other non declared props.
+
+[view demo in CodePen](https://codepen.io/lewhunt/pen/XWQNgpe)
 
 ```jsx
 import { useEffect, useState } from "react";
