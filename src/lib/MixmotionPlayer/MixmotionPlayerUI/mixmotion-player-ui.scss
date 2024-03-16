@@ -57,19 +57,17 @@
     .mixmotion-player-ui__image,
     .metadata,
     .progress-bar {
-      transition: opacity 0.2s, transform 0.4s;
+      transition: opacity 0.2s, transform 0.3s;
       opacity: 0 !important;
       transform: translateY(50%);
       pointer-events: none;
     }
-    .metadata {
-      transform: translateY(100%);
-    }
+
     .mixmotion-player-ui__cover {
       opacity: 1;
     }
     .mixmotion-player-ui__content {
-      transform: translateY(20%);
+      transform: translateY(25%);
       @media screen and (max-width: $small-screen-size) {
         transform: translateY(18%);
       }
@@ -428,7 +426,7 @@
   }
 
   .progress-bar-wrapper {
-    min-height: $buttons-height;
+    min-height: calc($buttons-height + vw($padding-tb));
   }
 }
 
