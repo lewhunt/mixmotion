@@ -50,8 +50,6 @@ npm install mixmotion-player
 
 Import the player and render MixmotionPlayer in your own app with a Mixcloud URL. It will use default settings for the other non declared props.
 
-[view demo in CodePen](https://codepen.io/lewhunt/pen/XWQNgpe)
-
 ```jsx
 import { useEffect, useState } from "react";
 import { MixmotionPlayer } from "mixmotion-player";
