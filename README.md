@@ -18,7 +18,7 @@
 <p align='center'>
 An immersive music player with Mixcloud integration and dynamic visual effects</p>
 
-[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-promo-6.jpg)](https://lewhunt.github.io/mixmotion/)
+[![https://lewhunt.github.io/mixmotion/](https://lewhunt.github.io/assets/readme/mm-player-example.jpg)](https://lewhunt.github.io/mixmotion/)
 
 <p align='center'><i>Click the image to try out the app</i>
 
@@ -30,7 +30,7 @@ For casual users who just want to discover some new music with fullscreen visual
 
 **https://lewhunt.github.io/mixmotion**
 
-On playing a set, you'll enter playback mode with dynamic background effects appearing after a few seconds of user inactivity. Below is a quick video of the app transitioning between playback modes:
+On playback, you'll enter an immersive lean-back mode, with a huge variety of dynamic backgrounds appearing after a few seconds of user inactivity. Below is a quick video of the app transitioning between playback modes:
 
 https://github.com/lewhunt/mixmotion/assets/9886284/95a2116f-5e4c-47fc-af65-6e65a53a0048
 
@@ -87,20 +87,20 @@ The <a href='https://github.com/lewhunt/mixmotion/blob/main/src/DemoAdvanced.tsx
 
 There are plenty of web players and widgets already available from the likes of Soundcloud and Mixcloud that you can integrate into your app.
 
-Mixmotion offers something a bit different; an immersive, full-screen experience with unique visual effects, still providing free access to Mixcloud's vast music catalogue.
+Mixmotion offers something different; an immersive, full-screen playback experience with unique visual effects, while still providing free access to Mixcloud's vast music catalogue.
 
 ## What Sets It Apart?
 
 - <b>Mixcloud Integration</b>: Simple yet versatile access to Mixcloud content that goes beyond their official widget. Access playlists, user sets, genres, tags and individual shows, with the ability to privately save favourites via local storage and share mixes.
-- <b>Dynamic Visuals</b>: Artwork combined with canvas effects and video motion backgrounds generate a captivating blend of imagery in a rich, immersive music player.
+- <b>Dynamic Visuals</b>: Artwork combined with canvas effects and video motion backgrounds generate a captivating blend of imagery within a rich, immersive music player.
 - <b>Broad Device Support</b>: Designed for mobile, desktop and TV devices. Touch, cursor and arrow-key navigation help make the user experience smooth across platforms.
 - <b>Future Considerations</b>: Integration with local file paths, audio streams and other music services like Soundcloud. Real-time audio visualizations and beat detection are also being considered.
 
 ## How Does It Work?
 
-Under the hood, the component is built on top of the official <a href="https://www.mixcloud.com/developers/" target="_blank">Mixcloud API</a> and <a href="https://www.mixcloud.com/developers/widget/" target="_blank">Mixcloud Widget</a>. It also utilises another custom component of mine - Dynamic Backdrop - to create the blended mix of transforms, canvas animations and video backgrounds.
+Under the hood, the component is built on top of the official <a href="https://www.mixcloud.com/developers/" target="_blank">Mixcloud API</a> and <a href="https://www.mixcloud.com/developers/widget/" target="_blank">Mixcloud Widget</a>.
 
-Built with React TypeScript, it's packaged using <a href="https://vitejs.dev/" target="_blank">Vite</a> to generate an installable npm component library.
+It also utilises another custom component of mine - Dynamic Backdrop - to create a blend of videos layered with css and canvas animation effects. Videos are given random 'blend modes' so they merge with the canvas background to give various colour effects.
 
 <hr>
 
@@ -277,16 +277,6 @@ https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce
 [![Mixmotion video on YouTube](https://lewhunt.github.io/assets/readme/mm-player-example.jpg)](https://www.youtube.com/watch?v=_oPRTqFwmRs)
 
 <p align='center'><i>Click to view video promo on YouTube</i>
-
-&nbsp;
-
-## Support
-
-[ :speech_balloon: Fire over a comment](https://github.com/lewhunt/mixmotion/issues) if you have any feedback, requests or issues :bug:
-
-[:star: Smash us a Github star](https://github.com/lewhunt/mixmotion) if you like the app or component :pray:
-
-[:link: Share your favourite sets](https://lewhunt.github.io/mixmotion/) in the app to support the creators :raised_hands:
 
 &nbsp;
 
