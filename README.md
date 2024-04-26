@@ -262,18 +262,6 @@ https://github.com/lewhunt/mixmotion/assets/9886284/fe234146-28f5-49ca-8786-d2ef
 
 &nbsp;
 
-https://github.com/lewhunt/mixmotion/assets/9886284/3eac30ea-ae4b-4916-9615-3cc38ff6b213
-
-<p align='center'><i>Playback Mode (example 2)</i>
-
-&nbsp;
-
-https://github.com/lewhunt/mixmotion/assets/9886284/ff9fdb0d-ef02-4f04-914d-e8ce6a91fdcb
-
-<p align='center'><i>Playback Mode (example 3)</i>
-
-&nbsp;
-
 [![Mixmotion video on YouTube](https://lewhunt.github.io/assets/readme/mm-player-example.jpg)](https://www.youtube.com/watch?v=_oPRTqFwmRs)
 
 <p align='center'><i>Click to view video promo on YouTube</i>
