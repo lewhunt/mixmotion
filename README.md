@@ -268,6 +268,14 @@ https://github.com/lewhunt/mixmotion/assets/9886284/fe234146-28f5-49ca-8786-d2ef
 
 &nbsp;
 
-## [:point_right: Try out the App :point_left:](https://lewhunt.github.io/mixmotion/)
+<br/>
 
-**https://lewhunt.github.io/mixmotion**
+## Support
+
+I hope this has given a good intro to the app and component.
+
+[💬 Fire over a comment](https://github.com/lewhunt/mixmotion/issues) if you have any feedback, requests or issues 🐛
+
+[⭐ Give it a star](https://github.com/lewhunt/mixmotion) if you like the component or want to bookmark it 🙏
+
+<br/>
