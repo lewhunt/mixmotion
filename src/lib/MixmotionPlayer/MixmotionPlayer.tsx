@@ -141,14 +141,14 @@ export const MixmotionPlayer: React.FC<MixmotionPlayerProps> = (props) => {
 
         widget.getDuration().then(function (duration: number) {
           actions.setLoaded(false);
-          if (!duration) {
+          if (!duration && !shows[showIndex].audio_length) {
             console.error("licence issue");
             actions.setShowUnavailable(true);
             actions.setPlaying(false);
             return;
           }
           actions.setLoaded(true);
-          actions.setDuration(duration);
+          actions.setDuration(duration || shows[showIndex].audio_length);
           actions.setShowUnavailable(false);
           !props.collapsed && actions.setCollapsed(false);
           timer.current = setTimeout(

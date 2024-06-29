@@ -50,6 +50,7 @@ export type ShowItemType = {
     [key: string]: any;
   };
   [key: string]: any;
+  audio_length: number;
 };
 
 export type MixmotionPlayerProps = {

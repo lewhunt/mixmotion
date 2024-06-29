@@ -105,8 +105,8 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
   ];
 
   const togglePlay = useCallback(() => {
-    player.togglePlay();
-  }, [player]);
+    !playing ? player.play() : player.pause();
+  }, [player, playing]);
 
   const toggleMuted = useCallback(() => {
     const newVolume = volume === 1 ? 0 : 1;
@@ -431,7 +431,7 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
         </FocusContext.Provider>
 
         <div className="progress-bar-wrapper">
-          {activity && !collapsed && !showWidget && <ProgressBar />}
+          {!showWidget && <ProgressBar />}
         </div>
       </div>
     </div>

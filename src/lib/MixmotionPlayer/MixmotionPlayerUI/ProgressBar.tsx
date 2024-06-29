@@ -20,13 +20,16 @@ function ProgressBar() {
   const progressPercentage = (currentTime / duration) * 100;
   const skipIncrement = duration / 20;
 
-  const handleSkipBack = useCallback(() => {
-    player && progress && player.seek(progress - skipIncrement);
-  }, [player, skipIncrement, progress]);
-
-  const handleSkipForward = useCallback(() => {
-    player && progress && player.seek(progress + skipIncrement);
-  }, [player, skipIncrement, progress]);
+  const handleSkip = useCallback(
+    (dir: number) => {
+      let updatedTime = currentTime + skipIncrement * dir;
+      if (dir === 1 && updatedTime >= duration) updatedTime = duration;
+      else if (dir === -1 && updatedTime <= 0) updatedTime = 0;
+      actions.setProgress(updatedTime);
+      player.seek(updatedTime);
+    },
+    [player, skipIncrement, currentTime, duration]
+  );
 
   const handleMoveToPosition = useCallback(
     (event: React.MouseEvent | React.TouchEvent) => {
@@ -85,16 +88,17 @@ function ProgressBar() {
     if (player) {
       try {
         const seconds: number = await player.getPosition();
-        actions.setProgress(seconds);
+        if (seconds) actions.setProgress(seconds);
+        else actions.setProgress(currentTime + 1);
       } catch (error) {
         console.error("Error getting position:", error);
       }
     }
-  }, [player, actions]);
+  }, [player, actions, currentTime]);
 
   useEffect(() => {
     if (playing && !isPressed.current) {
-      timerRef.current = setInterval(updateProgress, 100);
+      timerRef.current = setInterval(updateProgress, 1000);
     } else {
       clearInterval(timerRef.current!);
     }
@@ -129,7 +133,7 @@ function ProgressBar() {
             key="progress-bar-button"
             handleArrowPress={(dir: string) => {
               if (dir === "up" || dir === "down") return true;
-              dir === "left" ? handleSkipBack() : handleSkipForward();
+              dir === "left" ? handleSkip(-1) : handleSkip(1);
               return false;
             }}
           />
