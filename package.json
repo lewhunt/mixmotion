@@ -3,7 +3,7 @@
   "author": "Lewis Hunt",
   "description": "Stream new music with dynamic visuals. A React audio player component with Mixcloud integration and fullscreen visual effects for a rich, immersive listening experience. It offers versatile access to Mixcloud content from playlists to users, genres and shows. Designed for mobile, web & TV, supporting touch, cursor & arrow key navigation.",
   "private": false,
-  "version": "1.0.33",
+  "version": "1.0.34",
   "type": "module",
   "homepage": "https://lewhunt.github.io/mixmotion",
   "repository": "https://github.com/lewhunt/mixmotion.git",
@@ -26,13 +26,15 @@
     "@types/react-helmet-async": "^1.0.3",
     "classnames": "^2.3.2",
     "lodash": "^4.17.21",
-    "react": "^18.2.0",
     "react-div-100vh": "^0.7.0",
-    "react-dom": "^18.2.0",
     "react-helmet-async": "^2.0.4",
     "react-router-dom": "^6.21.1",
     "vite-plugin-css-injected-by-js": "^3.3.0",
     "zustand": "^4.4.1"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^6.0.0",
