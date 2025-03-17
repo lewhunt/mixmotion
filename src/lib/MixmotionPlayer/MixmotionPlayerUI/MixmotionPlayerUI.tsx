@@ -104,9 +104,9 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
     { action: "collapse", align: "right" },
   ];
 
-  const togglePlay = useCallback(() => {
-    !playing ? player.play() : player.pause();
-  }, [player, playing]);
+  const togglePlaying = useCallback(() => {
+    actions.setPlaying(!playing);
+  }, [playing]);
 
   const toggleMuted = useCallback(() => {
     const newVolume = volume === 1 ? 0 : 1;
@@ -193,6 +193,11 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
   }, [player, volume]);
 
   useEffect(() => {
+    if (!player) return;
+    playing ? player.play() : player.pause();
+  }, [playing, player]);
+
+  useEffect(() => {
     actions.setShowsLabel(showsLabel?.toLowerCase()?.replace("show", "set"));
   }, [showsLabel]);
 
@@ -240,7 +245,7 @@ export const MixmotionPlayerUI: React.FC<MixmotionPlayerProps> = (props) => {
       playpause: {
         action: "playpause",
         label: showUnavailable ? "Unavailable" : playing ? "Pause" : "Play",
-        onPress: togglePlay,
+        onPress: togglePlaying,
         faIcon: playing ? faPause : faPlay,
         isLarge: true,
         disabled: showUnavailable,
