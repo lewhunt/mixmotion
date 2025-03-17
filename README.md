@@ -30,7 +30,7 @@ For casual users who just want to discover some new music with fullscreen visual
 
 **https://lewhunt.github.io/mixmotion**
 
-On playback, you'll enter an immersive lean-back mode, with a huge variety of dynamic backgrounds appearing after a few seconds of user inactivity. Below is a quick video of the app transitioning between playback modes:
+On playback, you'll enter an immersive lean-back mode, with the abilty to toggle on/off a vast selection of dynamic background visuals. Below is a quick video of the app transitioning between playback modes:
 
 https://github.com/lewhunt/mixmotion/assets/9886284/95a2116f-5e4c-47fc-af65-6e65a53a0048
 
